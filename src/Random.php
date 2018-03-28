@@ -118,4 +118,78 @@ class Random
     
         return implode('', $arrRet);
     }
+    
+    /**
+     * 从数组中随机
+     * @param array $array ['24_35' => 230,'36_47' => 1355,'48_59' => 3415,'60_71' => 3415,'72_83' => 1355,'84_96' => 230,]
+     * @return int|mixed|string
+     * @author lingtima@gmail.com
+     */
+    public function generateInScopeArray($array)
+    {
+        if (count($array) === 1) {
+            $result = key($array);
+        } else {
+            $result = '';
+            $arraySum = array_sum($array);
+            
+            //概率数组循环
+            $vSum = 0;
+            $randNum = random_int(1, $arraySum);
+            foreach ($array as $k => $v) {
+                $vSum += $v;
+                if ($randNum <= $vSum) {
+                    $result = $k;
+                    break;
+                }
+            }
+        }
+        
+        $loc = strpos($result, '_');
+        if ($loc) {
+            $result = random_int(substr($result, 0, $loc), substr($result, $loc + 1));
+        }
+        return $result;
+    }
+    
+    /**
+     * 更可靠的拆分金额算法
+     * @param int $totalAmount 总金额，单位分
+     * @param int $totalNum 总数量
+     * @param int $minAmount 最小金额，单位分
+     * @param array $result 结果数组，写入数组
+     * @return array|bool 结果数组，形如[123,332,44,174,9,529]
+     * @author lingtima@gmail.com
+     */
+    public function generateMoneyVector(int $totalAmount, int $totalNum, int $minAmount = 1, array $result = [])
+    {
+        /**
+         * 使用递归完成最简单的红包切分
+         * 优点：简单、移动、快速
+         * 缺点：当可配金额越大时，红包金额可能会出现较大的差额！(即最小值出现的比较多)
+         * 改进：加入波动配置，根据配置计算金额波动（在最终随机前，根据波动配置调整随机范围）
+         */
+        if ($totalAmount === 0 || $totalNum === 0 || ($totalAmount < $totalNum * $minAmount)) {
+            return false;
+        }
+        
+        //等额切分
+        if ($totalAmount === $totalNum * $minAmount) {
+            for ($i = 0; $i < $totalNum; $i++) {
+                $result[] = $minAmount;
+            }
+            shuffle($result);
+            return $result;
+        }
+        
+        //最后一个红包
+        if ($totalNum == 1) {
+            array_push($result, $totalAmount);
+            shuffle($result);
+            return $result;
+        }
+        $mineAmount = random_int($minAmount, floor(($totalAmount - $totalNum * $minAmount) / 2 + $minAmount));//优化点
+        $result[] = $mineAmount;
+        return $this->generateMoneyVector(($totalAmount - $mineAmount), ($totalNum - 1), $minAmount, $result);
+    }
 }

@@ -10,5 +10,9 @@ use PHPUnit\Framework\TestCase as BaseTestCase;
 
 class TestCase extends BaseTestCase
 {
-
+    public function __construct($name = null, array $data = [], $dataName = '')
+    {
+        error_log('=========================PHPUNIT=========================');
+        parent::__construct($name, $data, $dataName);
+    }
 }

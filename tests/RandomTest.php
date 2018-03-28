@@ -11,8 +11,14 @@ use Tools\Random;
 
 class RandomTest extends BaseTestCase
 {
+    /**
+     * @
+     * @author lingtima@gmail.com
+     */
     public function testGetString()
     {
+        $this->markTestIncomplete('complete');
+        
         $Random = new Random();
         
         for ($i = 0; $i < 100; $i++) {
@@ -90,6 +96,30 @@ class RandomTest extends BaseTestCase
                         break;
                 }
             }
+        }
+    }
+    
+    public function testGenerateInScopeArray()
+    {
+        $this->assertTrue(true);
+    }
+    
+    public function testGenerateMoneyVector()
+    {
+        $this->markTestIncomplete('complete');
+        
+        $Random = new Random();
+        for ($i = 0; $i < 1000; $i++) {
+            $minAmount = random_int(1, 100);
+            $totalNum = random_int(1, 1000);
+            $totalAmount = ($minAmount + random_int(1, 50)) * $totalNum;
+            
+            $arrRet = $Random->generateMoneyVector($totalAmount, $totalNum, $minAmount);
+            $this->assertCount($totalNum, $arrRet);
+            $this->assertEquals($totalAmount, array_sum($arrRet));
+            
+            sort($arrRet);
+            $this->assertTrue($arrRet[0] >= $minAmount);
         }
     }
 }
