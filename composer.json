@@ -1,0 +1,26 @@
+{
+    "name": "lingtima/tools",
+    "description": "php Common tools library",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "6.5"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "lingtima",
+            "email": "lingtima@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4":{
+            "Tools\\":"src/"
+        }
+    },
+    "autoload-dev":{
+        "psr-4":{
+            "Tools\\Tests\\":"tests/"
+        }
+    }
+}
