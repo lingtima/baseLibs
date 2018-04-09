@@ -101,7 +101,7 @@ class RandomTest extends BaseTestCase
     
     public function testGenerateInScopeArray()
     {
-        $this->assertTrue(true);
+        $Random = new Random();
     }
     
     public function testGenerateMoneyVector()

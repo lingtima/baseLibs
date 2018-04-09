@@ -120,13 +120,16 @@ class Random
     }
     
     /**
-     * 从数组中随机
+     * 从数组中概率随机
      * @param array $array ['24_35' => 230,'36_47' => 1355,'48_59' => 3415,'60_71' => 3415,'72_83' => 1355,'84_96' => 230,]
      * @return int|mixed|string
      * @author lingtima@gmail.com
      */
     public function generateInScopeArray($array)
     {
+        if (!is_array($array)) {
+            return $array;
+        }
         if (count($array) === 1) {
             $result = key($array);
         } else {
