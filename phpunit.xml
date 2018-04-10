@@ -28,5 +28,10 @@
     </filter>
     <php>
         <const name="PHPUNIT_RUNNING" value="true" />
+        <var name="DB_TYPE" value="mysql" />
+        <var name="DB_HOST" value="127.0.0.1" />
+        <var name="DB_NAME" value="unit" />
+        <var name="DB_USER" value="root" />
+        <var name="DB_PASSWORD" value="root" />
     </php>
 </phpunit>

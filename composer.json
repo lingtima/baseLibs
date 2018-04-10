@@ -3,7 +3,8 @@
     "description": "php Common tools library",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "6.5"
+        "phpunit/phpunit": "6.5",
+        "phpunit/dbunit": "^3.0"
     },
     "license": "MIT",
     "authors": [
