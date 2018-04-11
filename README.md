@@ -21,3 +21,6 @@
 ## UUID
 
 * 从UUID库中获取一个UUID
+
+## IP
+* 获取用户真实IP
