@@ -1,8 +1,8 @@
 <?php
 
-namespace Lingance\Pattern\Builder\Builder;
+namespace Tools\Pattern\Builder\Builder;
 
-use Lingance\Pattern\Builder\User\Borrower;
+use Tools\Pattern\Builder\User\Borrower;
 
 class BorrowerBuilder implements IBuilder
 {

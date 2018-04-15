@@ -1,6 +1,6 @@
 <?php
 
-namespace Lingance\Pattern\Builder\User;
+namespace Tools\Pattern\Builder\User;
 
 class Member extends AUser
 {

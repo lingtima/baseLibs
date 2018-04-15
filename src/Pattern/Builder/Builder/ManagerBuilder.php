@@ -1,8 +1,8 @@
 <?php
 
-namespace Lingance\Pattern\Builder\Builder;
+namespace Tools\Pattern\Builder\Builder;
 
-use Lingance\Pattern\Builder\User\Manager;
+use Tools\Pattern\Builder\User\Manager;
 
 class ManagerBuilder implements IBUilder
 {

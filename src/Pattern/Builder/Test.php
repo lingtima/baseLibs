@@ -1,8 +1,8 @@
 <?php
 
-namespace Lingance\Pattern\Builder;
+namespace Tools\Pattern\Builder;
 
-use Lingance\Pattern\Builder\Builder\BorrowerBuilder;
+use Tools\Pattern\Builder\Builder\BorrowerBuilder;
 
 class Test
 {

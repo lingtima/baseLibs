@@ -1,11 +1,10 @@
 <?php
 
-namespace Lingance\Pattern\Builder;
+namespace Tools\Pattern\Builder;
 
-use Lingance\Pattern\Builder\Builder\IBuilder;
+use Tools\Pattern\Builder\Builder\IBuilder;
 
 class Director
-IBuilder
 {
     /**
      * @param IBuilder $builder

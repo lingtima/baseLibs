@@ -1,8 +1,8 @@
 <?php
 
-namespace Lingance\Pattern\Builder\Builder;
+namespace Tools\Pattern\Builder\Builder;
 
-use Lingance\Pattern\Builder\User\AUser;
+use Tools\Pattern\Builder\User\AUser;
 
 interface IBuilder
 {

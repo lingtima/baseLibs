@@ -1,8 +1,8 @@
 <?php
 
-namespace Lingance\Pattern\Builder\Builder;
+namespace Tools\Pattern\Builder\Builder;
 
-use Lingance\Pattern\Builder\User\Visitor;
+use Tools\Pattern\Builder\User\Visitor;
 
 class VisitorBuilder implements IBuilder
 {
