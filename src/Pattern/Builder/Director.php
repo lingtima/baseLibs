@@ -5,6 +5,7 @@ namespace Lingance\Pattern\Builder;
 use Lingance\Pattern\Builder\Builder\IBuilder;
 
 class Director
+IBuilder
 {
     /**
      * @param IBuilder $builder
