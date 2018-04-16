@@ -2,7 +2,7 @@
 
 namespace Tools\Pattern\Singleton;
 
-class Singleton
+final class Singleton
 {
     /**
      * @var Singleton
