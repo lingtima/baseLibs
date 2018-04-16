@@ -1,6 +1,6 @@
 <?php
 
-namespace Tools\Tests\SimpleFactory;
+namespace Tools\Tests\Pattern\SimpleFactory;
 
 use Tools\Pattern\SimpleFactory\Bicycle;
 use Tools\Pattern\SimpleFactory\SimpleFactory;
