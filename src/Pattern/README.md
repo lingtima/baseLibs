@@ -175,7 +175,7 @@ GoF将模式的概念引入软件工程领域，这标志着软件模式的诞�
 # 设计模式目录
 
 * [创建型](Creational)
-    - [简单工厂模式](Creational/SimpleFactory)
+    - [简单工厂模式](Creational/SimpleFactory) --- [测试](/tests/Pattern/Creational/SimpleFatory)
     - [工厂方法模式](Creational/FactoryMethod)
     - [静态工厂模式](Creational/StaticFactory)
     - [抽象工厂模式](Creational/AbstractFactory)
