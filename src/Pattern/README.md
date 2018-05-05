@@ -197,7 +197,7 @@ GoF将模式的概念引入软件工程领域，这标志着软件模式的诞�
     - [注册模式](Structural/Registry) --- [测试](/tests/Pattern/Structural/Registry)
 
 * [行为型模式](Behavioral)
-    - [责任链模式](Behavioral/ChainOfResponsibilities)---[测试](/tests/Pattern/Behavioral/ChainOfResponseBilities)
+    - [责任链模式](Behavioral/ChainOfResponsibilities)---[测试](/tests/Pattern/Behavioral/ChainOfResponsibilities)
     - [命令行模式](Behavioral/Command)---[测试](/tests/Pattern/Behavioral/Command)
     - [迭代器模式](Behavioral/Iterator)---[测试](/tests/Pattern/Behavioral/Itertor)
     - [中介者模式](Behavioral/Mediator)---[测试](/tests/Pattern/Behavioral/Mediator)
