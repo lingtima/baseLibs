@@ -4,7 +4,7 @@
  * Time: 2018/10/8 16:18
  */
 
-namespace Tools\Services;
+namespace Tools\Services\RedisLock;
 
 use Illuminate\Support\Facades\Redis;
 use Predis\Response\Status;

@@ -14,8 +14,11 @@
         }
     ],
     "require": {
-        "php": ">= 7.0",
-        "psr/http-message": "^1.0"
+        "php": ">= 7.1.8",
+        "psr/http-message": "^1.0",
+        "nesbot/carbon": "^2.10",
+        "predis/predis": "^1.1",
+        "monolog/monolog": "^1.24"
     },
     "autoload": {
         "psr-4":{
