@@ -133,6 +133,7 @@ class Semaphore
         Redis::zremrangebyscore($expirationKey, '-inf', $nowTimestamp - $expirationSeconds);//删除超时信号量
         Redis::zinterstore($normalKey, [$normalKey, $expirationKey], []);//取交集
 
+        //TODO 这里自增是有上限的，需要另行处理
         $counter = Redis::incr($counterKey);//计数器自增
         Redis::zadd($normalKey, $counter, $identifier);
         Redis::zadd($expirationKey, $nowTimestamp, $identifier);
