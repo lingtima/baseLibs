@@ -6,7 +6,7 @@
  * Time: 9:25
  */
 
-namespace Tools;
+namespace Tools\Services;
 
 class Common
 {
